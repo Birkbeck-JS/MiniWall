@@ -91,7 +91,7 @@ router.patch("/comment/delete/:postID/:commentID", verifyToken, async(req, res) 
 })
 
 //Patch Like Post
-router.patch("/like/:postID", async(req, res) => {
+router.patch("/like/:postID", verifyToken, async(req, res) => {
     try{
         //can use find as any return value will mean that the post has already been liked
         const liked = await Post.findOne({"_id": mongoose.Types.ObjectId(req.params.postID), "likedBy.user": {$eq: seshwari._id}}, {"_id": 0, "likedBy.user": 1})
