@@ -284,6 +284,18 @@
 		},
 		{
 			"name": "Olga create post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.collectionVariables.set(\"Olga_post\", jsonData._id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -345,6 +357,18 @@
 		},
 		{
 			"name": "Nick create post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.collectionVariables.set(\"Nick_post\", jsonData._id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -406,6 +430,18 @@
 		},
 		{
 			"name": "Mary create post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.collectionVariables.set(\"Mary_post\", jsonData._id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -585,7 +621,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/comment/63880112ee6f964d0e4892c6",
+					"raw": "localhost:3000/posts/comment/{{Mary_post}}",
 					"host": [
 						"localhost"
 					],
@@ -593,7 +629,7 @@
 					"path": [
 						"posts",
 						"comment",
-						"63880112ee6f964d0e4892c6"
+						"{{Mary_post}}"
 					]
 				}
 			},
@@ -601,6 +637,18 @@
 		},
 		{
 			"name": "Nick comment Mary dup",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.collectionVariables.set(\"Mary_comment_id\", jsonData.comments[jsonData.comments.length-1]._id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PATCH",
 				"header": [
@@ -620,7 +668,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/comment/63880112ee6f964d0e4892c6",
+					"raw": "localhost:3000/posts/comment/{{Mary_post}}",
 					"host": [
 						"localhost"
 					],
@@ -628,7 +676,7 @@
 					"path": [
 						"posts",
 						"comment",
-						"63880112ee6f964d0e4892c6"
+						"{{Mary_post}}"
 					]
 				}
 			},
@@ -655,7 +703,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/comment/delete/63880112ee6f964d0e4892c6/638801c7ee6f964d0e4892d1",
+					"raw": "localhost:3000/posts/comment/delete/{{Mary_post}}/{{Mary_comment_id}}",
 					"host": [
 						"localhost"
 					],
@@ -664,8 +712,8 @@
 						"posts",
 						"comment",
 						"delete",
-						"63880112ee6f964d0e4892c6",
-						"638801c7ee6f964d0e4892d1"
+						"{{Mary_post}}",
+						"{{Mary_comment_id}}"
 					]
 				}
 			},
@@ -719,7 +767,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/comment/63880112ee6f964d0e4892c6",
+					"raw": "localhost:3000/posts/comment/{{Mary_post}}",
 					"host": [
 						"localhost"
 					],
@@ -727,7 +775,7 @@
 					"path": [
 						"posts",
 						"comment",
-						"63880112ee6f964d0e4892c6"
+						"{{Mary_post}}"
 					]
 				}
 			},
@@ -781,7 +829,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/comment/63880112ee6f964d0e4892c6",
+					"raw": "localhost:3000/posts/comment/{{Mary_post}}",
 					"host": [
 						"localhost"
 					],
@@ -789,7 +837,7 @@
 					"path": [
 						"posts",
 						"comment",
-						"63880112ee6f964d0e4892c6"
+						"{{Mary_post}}"
 					]
 				}
 			},
@@ -879,7 +927,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/like/63881118ffa2d83106e1e3bb",
+					"raw": "localhost:3000/posts/like/{{Mary_post}}",
 					"host": [
 						"localhost"
 					],
@@ -887,7 +935,7 @@
 					"path": [
 						"posts",
 						"like",
-						"63881118ffa2d83106e1e3bb"
+						"{{Mary_post}}"
 					]
 				}
 			},
@@ -941,7 +989,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/like/63881118ffa2d83106e1e3bb",
+					"raw": "localhost:3000/posts/like/{{Mary_post}}",
 					"host": [
 						"localhost"
 					],
@@ -949,7 +997,7 @@
 					"path": [
 						"posts",
 						"like",
-						"63881118ffa2d83106e1e3bb"
+						"{{Mary_post}}"
 					]
 				}
 			},
@@ -1003,7 +1051,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/like/63881118ffa2d83106e1e3bb",
+					"raw": "localhost:3000/posts/like/{{Mary_post}}",
 					"host": [
 						"localhost"
 					],
@@ -1011,7 +1059,7 @@
 					"path": [
 						"posts",
 						"like",
-						"63881118ffa2d83106e1e3bb"
+						"{{Mary_post}}"
 					]
 				}
 			},
@@ -1101,7 +1149,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/unlike/63881118ffa2d83106e1e3bb",
+					"raw": "localhost:3000/posts/unlike/{{Mary_post}}",
 					"host": [
 						"localhost"
 					],
@@ -1109,7 +1157,7 @@
 					"path": [
 						"posts",
 						"unlike",
-						"63881118ffa2d83106e1e3bb"
+						"{{Mary_post}}"
 					]
 				}
 			},
@@ -1172,7 +1220,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/delete/63880112ee6f964d0e4892c6",
+					"raw": "localhost:3000/posts/delete/{{Mary_post}}",
 					"host": [
 						"localhost"
 					],
@@ -1180,7 +1228,7 @@
 					"path": [
 						"posts",
 						"delete",
-						"63880112ee6f964d0e4892c6"
+						"{{Mary_post}}"
 					]
 				}
 			},
@@ -1207,7 +1255,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/delete/63880112ee6f964d0e4892c6",
+					"raw": "localhost:3000/posts/delete/{{Olga_post}}",
 					"host": [
 						"localhost"
 					],
@@ -1215,11 +1263,49 @@
 					"path": [
 						"posts",
 						"delete",
-						"63880112ee6f964d0e4892c6"
+						"{{Olga_post}}"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Mary_post",
+			"value": ""
+		},
+		{
+			"key": "Olga_post",
+			"value": ""
+		},
+		{
+			"key": "Nick_post",
+			"value": ""
+		},
+		{
+			"key": "Mary_comment_id",
+			"value": ""
 		}
 	]
 }

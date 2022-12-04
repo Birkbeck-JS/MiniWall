@@ -91,13 +91,13 @@ router.patch("/comment/delete/:postID/:commentID", verifyToken, async(req, res) 
 })
 
 //Patch Like Post
-router.patch("/like/:postID", verifyToken, async(req, res) => {
+router.patch("/like/:postID", async(req, res) => {
     try{
         //can use find as any return value will mean that the post has already been liked
-        const liked = await Post.findOne({"_id": mongoose.Types.ObjectId(req.params.postID), "likedBy.user": {$eq: seshwari._id}}, {"_id": 1})
-        //const test2 = await Post.find({"_id": mongoose.Types.ObjectId(req.params.postID), "likedBy.user": {$eq: mongoose.Types.ObjectId("6386b1128659ab8fcca7d621")}}, {"_id": 0, "likedBy.user": 1})
+        const liked = await Post.findOne({"_id": mongoose.Types.ObjectId(req.params.postID), "likedBy.user": {$eq: seshwari._id}}, {"_id": 0, "likedBy.user": 1})
+        //const test2 = await Post.findOne({"_id": mongoose.Types.ObjectId(req.params.postID), "likedBy.user": {$eq: mongoose.Types.ObjectId("6386b1128659ab8fcca7d621")}}, {"_id": 0, "likedBy.user": 1})
         //check if post has already been liked by user
-        if(liked.length == 0){
+        if(liked == null){
             //if post hasn't already been liked by user, check user isn't post owner
             const updateLikes = await Post.findById({"_id": req.params.postID}, {"user": 1, "likedBy": 1, "likesNum": 1})
             if(updateLikes.user.valueOf() != seshwari._id.valueOf()){
@@ -120,11 +120,12 @@ router.patch("/like/:postID", verifyToken, async(req, res) => {
 router.patch("/unlike/:postID", verifyToken, async(req, res) => {
     try{
         //check if post has already been liked by user
-        const unliked = await Post.findOne({"_id": mongoose.Types.ObjectId(req.params.postID), "likedBy.user": {$eq: seshwari._id}})
-        if(unliked){
-            pullit = await Post.updateOne({"_id": mongoose.Types.ObjectId(req.params.postID)}, {$pull: {likedBy: {user: seshwari._id}}})
+        const unliked = await Post.findOne({"_id": mongoose.Types.ObjectId(req.params.postID), "likedBy.user": {$eq: seshwari._id}}, {"likedBy.user": 1, "likesNum": 1})
+        const user_check = (unliked.likedBy[0].user.valueOf() == seshwari._id.valueOf())
+        if(user_check){
             unliked.likesNum -= 1
             unliked.save()
+            pullit = await Post.updateOne({"_id": mongoose.Types.ObjectId(req.params.postID)}, {$pull: {likedBy: {user: seshwari._id}}})
             res.send({message:"unliked"})
         }else{
             res.send("you've never liked this post")

@@ -53,6 +53,7 @@ app.post("/init", async(req,res) => {
         //drop collections to initialise blank database for testing
         const dropposts = await mongoose.connection.db.dropCollection("posts")
         const dropusers = await mongoose.connection.db.dropCollection("users")
+        res.send("collections deleted")
     }catch(err){
         //send reply as a JSON message
         res.send({message:err})
