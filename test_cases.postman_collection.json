@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "79789668-726f-4908-a6e4-bb47310d9a97",
-		"name": "test_cases_new",
+		"name": "test_cases",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "24027376"
 	},
@@ -12,11 +12,10 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/init",
+					"raw": "{{URL}}/init",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"init"
 					]
@@ -30,11 +29,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000",
+					"raw": "{{URL}}",
 					"host": [
-						"localhost"
-					],
-					"port": "3000"
+						"{{URL}}"
+					]
 				}
 			},
 			"response": []
@@ -45,11 +43,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/register",
+					"raw": "{{URL}}/register",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"register"
 					]
@@ -72,11 +69,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/register",
+					"raw": "{{URL}}/register",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"register"
 					]
@@ -99,11 +95,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/register",
+					"raw": "{{URL}}/register",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"register"
 					]
@@ -126,11 +121,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/register",
+					"raw": "{{URL}}/register",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"register"
 					]
@@ -153,11 +147,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -180,11 +173,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -207,11 +199,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -243,11 +234,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts",
+					"raw": "{{URL}}/posts",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"posts"
 					]
@@ -270,11 +260,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -315,13 +304,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/create",
+					"raw": "{{URL}}/post/create",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"create"
 					]
 				}
@@ -343,11 +331,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -388,13 +375,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/create",
+					"raw": "{{URL}}/post/create",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"create"
 					]
 				}
@@ -416,11 +402,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -461,13 +446,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/create",
+					"raw": "{{URL}}/post/create",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"create"
 					]
 				}
@@ -489,11 +473,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -525,13 +508,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts",
+					"raw": "{{URL}}/post",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts"
+						"post"
 					]
 				}
 			},
@@ -552,11 +534,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -588,13 +569,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts",
+					"raw": "{{URL}}/post",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts"
+						"post"
 					]
 				}
 			},
@@ -621,13 +601,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/comment/{{Mary_post}}",
+					"raw": "{{URL}}/post/comment/{{Mary_post}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"comment",
 						"{{Mary_post}}"
 					]
@@ -668,13 +647,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/comment/{{Mary_post}}",
+					"raw": "{{URL}}/post/comment/{{Mary_post}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"comment",
 						"{{Mary_post}}"
 					]
@@ -703,13 +681,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/comment/delete/{{Mary_post}}/{{Mary_comment_id}}",
+					"raw": "{{URL}}/post/comment/delete/{{Mary_post}}/{{Mary_comment_id}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"comment",
 						"delete",
 						"{{Mary_post}}",
@@ -734,11 +711,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -767,13 +743,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/comment/{{Mary_post}}",
+					"raw": "{{URL}}/post/comment/{{Mary_post}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"comment",
 						"{{Mary_post}}"
 					]
@@ -796,11 +771,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -829,13 +803,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/comment/{{Mary_post}}",
+					"raw": "{{URL}}/post/comment/{{Mary_post}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"comment",
 						"{{Mary_post}}"
 					]
@@ -867,13 +840,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts",
+					"raw": "{{URL}}/post",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts"
+						"post"
 					]
 				}
 			},
@@ -894,11 +866,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -927,13 +898,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/like/{{Mary_post}}",
+					"raw": "{{URL}}/post/like/{{Mary_post}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"like",
 						"{{Mary_post}}"
 					]
@@ -956,11 +926,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -989,13 +958,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/like/{{Mary_post}}",
+					"raw": "{{URL}}/post/like/{{Mary_post}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"like",
 						"{{Mary_post}}"
 					]
@@ -1018,11 +986,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -1051,13 +1018,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/like/{{Mary_post}}",
+					"raw": "{{URL}}/post/like/{{Mary_post}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"like",
 						"{{Mary_post}}"
 					]
@@ -1089,11 +1055,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts",
+					"raw": "{{URL}}/posts",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"posts"
 					]
@@ -1116,11 +1081,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/login",
+					"raw": "{{URL}}/login",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"login"
 					]
@@ -1149,13 +1113,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/unlike/{{Mary_post}}",
+					"raw": "{{URL}}/post/unlike/{{Mary_post}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"unlike",
 						"{{Mary_post}}"
 					]
@@ -1187,13 +1150,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts",
+					"raw": "{{URL}}/post",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts"
+						"post"
 					]
 				}
 			},
@@ -1220,13 +1182,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/delete/{{Mary_post}}",
+					"raw": "{{URL}}/post/delete/{{Mary_post}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"delete",
 						"{{Mary_post}}"
 					]
@@ -1255,13 +1216,12 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/posts/delete/{{Olga_post}}",
+					"raw": "{{URL}}/post/delete/{{Olga_post}}",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
-						"posts",
+						"post",
 						"delete",
 						"{{Olga_post}}"
 					]
@@ -1306,6 +1266,11 @@
 		{
 			"key": "Mary_comment_id",
 			"value": ""
+		},
+		{
+			"key": "URL",
+			"value": "localhost:3000",
+			"type": "string"
 		}
 	]
 }

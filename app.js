@@ -34,11 +34,11 @@ app.get("/", function(req, res){
 app.use(bodyParser.json())
 
 //load routes
-const postsRoute = require("./routes/posts")
+const postsRoute = require("./routes/post")
 const authRoute = require("./routes/auth")
 
 //use routes
-app.use("/posts", postsRoute)
+app.use("/post", postsRoute)
 app.use("/", authRoute)
 
 //connect to mongoDB
