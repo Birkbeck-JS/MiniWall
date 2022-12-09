@@ -234,12 +234,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/posts",
+					"raw": "{{URL}}/post",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
-						"posts"
+						"post"
 					]
 				}
 			},
@@ -1055,12 +1055,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/posts",
+					"raw": "{{URL}}/post",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
-						"posts"
+						"post"
 					]
 				}
 			},
