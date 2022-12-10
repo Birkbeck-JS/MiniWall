@@ -104,12 +104,12 @@ router.patch("/like/:postID", verifyToken, async(req, res) => {
                 updateLikes.likesNum += 1
                 updateLikes.likedBy.unshift({user:seshwari._id, username:seshwari.username}) //add user to array of likes
                 updateLikes.save()
-                res.send({message:"liked"})
+                res.send("liked")
             }else{
-                res.send("you can't like your own post")
+                res.send({message:"you can't like your own post"})
             }
         }else{
-            res.send("you've already liked this post")
+            res.send({message:"you've already liked this post"})
         }                
     }catch(err){
         res.send({message:err})
@@ -128,7 +128,7 @@ router.patch("/unlike/:postID", verifyToken, async(req, res) => {
             pullit = await Post.updateOne({"_id": mongoose.Types.ObjectId(req.params.postID)}, {$pull: {likedBy: {user: seshwari._id}}})
             res.send({message:"unliked"})
         }else{
-            res.send("you've never liked this post")
+            res.send({message:"you've never liked this post"})
         }                
     }catch(err){
         res.send({message:err})
@@ -144,7 +144,7 @@ router.delete("/delete/:postID", verifyToken, async(req, res) => {
             const deletetPostByID = await Post.deleteOne({_id:req.params.postID})
             res.send(deletetPostByID)
         }else{
-            res.send("you can't delete this post")
+            res.send({message:"you can't delete this post"})
         }
         }catch(err){
             res.send({message:err})
