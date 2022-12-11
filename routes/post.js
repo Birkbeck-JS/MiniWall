@@ -104,7 +104,7 @@ router.patch("/like/:postID", verifyToken, async(req, res) => {
                 updateLikes.likesNum += 1
                 updateLikes.likedBy.unshift({user:seshwari._id, username:seshwari.username}) //add user to array of likes
                 updateLikes.save()
-                res.send("liked")
+                res.send({message:"liked"})
             }else{
                 res.send({message:"you can't like your own post"})
             }
